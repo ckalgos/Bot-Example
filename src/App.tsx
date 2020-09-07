@@ -25,7 +25,7 @@ const App: React.FC = () => {
         <option value={4}>Snowy</option>
         <option value={5}>GradientGreen</option>
       </select>
-      {hideBotState ? null : <Bot config={configState} />}
+      {hideBotState ? null : <Bot config={configState} onConversationEnd={(data : string) => console.log(data)}/>}
     </>
   );
 }
